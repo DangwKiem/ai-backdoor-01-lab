@@ -2,7 +2,19 @@
 
 Bài thực hành Labtainers về kiểm tra SHA-256, phân tích hành vi của hai mô hình ONNX, xác minh trên SecureMail AI và khôi phục mô hình trong staging. Thời lượng dự kiến 90–120 phút.
 
-## Cài trên máy Linux hoặc VM Labtainers
+## Cài bằng IModule
+
+Trong terminal host của Labtainers trên Linux x86-64 hoặc VM Labtainers x86-64, chạy:
+
+```bash
+cd "$LABTAINER_DIR/scripts/labtainer-student"
+imodule https://raw.githubusercontent.com/DangwKiem/ai-backdoor-01-lab/main/imodule.tar
+labtainer ai-backdoor-01
+```
+
+Lần đầu chạy, Labtainers tải image sinh viên từ Docker Hub. Nếu có thông báo xác nhận tải image, nhập `y`.
+
+## Cài từ ZIP và tự dựng image
 
 Chuẩn bị một bản Labtainers có giao diện đồ họa, Docker và bộ công cụ Designer. Nếu thiếu lệnh `rebuild`, chạy `./update-designer.sh` từ `$LABTAINER_DIR/setup_scripts` rồi mở lại terminal.
 
@@ -14,7 +26,11 @@ cd "$LABTAINER_DIR/scripts/labtainer-student"
 rebuild ai-backdoor-01
 ```
 
-Lệnh `rebuild` khởi động lab sau khi dựng image. Trong một terminal của container `analyst`, mở hướng dẫn chi tiết:
+Lệnh `rebuild` khởi động lab sau khi dựng image.
+
+## Làm bài
+
+Trong một terminal của container `analyst`, mở hướng dẫn chi tiết:
 
 ```bash
 cd ~/ai-backdoor
